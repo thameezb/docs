@@ -139,4 +139,4 @@ See the GitHub [docs](https://help.github.com/en/github/collaborating-with-issue
 
 ## Monitoring
 
-The Armory documentation uses New Relic to monitor the website status and other metrics.
+The Armory documentation uses New Relic to monitor the website status and other metrics. 
