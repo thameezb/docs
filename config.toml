@@ -47,7 +47,7 @@ anchor = "smart"
 [services]
 [services.googleAnalytics]
 # Comment out the next line to disable GA tracking. Also disables the feature described in [params.ui.feedback].
-id = "UA-79996712-5"
+id = "UA-79996712-12"
 
 # Language configuration
 
@@ -102,12 +102,12 @@ terms_and_conditions = "https://www.armory.io/terms-and-conditions"
 
 # Menu title if your navbar has a versions selector to access old versions of your site.
 # This menu appears only if you have at least one [params.versions] set.
-version_menu = "Latest"
+version_menu = "v2.21"
 
 # Flag used in the "version-banner" partial to decide whether to display a
 # banner on every page indicating that this is an archived version of the docs.
 # Set this flag to "true" if you want to display the banner.
-archived_version = false
+archived_version = true
 
 # The version number for the version of the docs represented in this doc set.
 # Used in the "version-banner" partial to display a version number for the
@@ -194,6 +194,11 @@ enable = false
   version = "Latest"
   githubbranch = "master"
   url = "https://docs.armory.io"
+
+[[params.versions]]
+  version = "v2.21"
+  githubbranch = "v2.21"
+  url = "https://v2-21.docs.armory.io/docs"
 
 [[params.versions]]
   version = "v2.20"
