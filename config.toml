@@ -213,6 +213,11 @@ enable = true
   url = "https://docs.armory.io"
 
 [[params.versions]]
+  version = "v2.23"
+  githubbranch = "v2.23"
+  url = "https://v2-23.docs.armory.io/docs"
+
+[[params.versions]]
   version = "v2.22"
   githubbranch = "v2.22"
   url = "https://v2-22.docs.armory.io/docs"
