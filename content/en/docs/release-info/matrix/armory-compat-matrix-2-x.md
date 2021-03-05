@@ -1,7 +1,6 @@
 ---
-title: Armory Platform Compatibility Matrix
-linkTitle: Armory Platform Compatibility
-weight: 100
+title: Armory Platform Compatibility Matrix for v2.x
+linkTitle: 2.x Armory Platform Compatibility
 description: "Information about support and compatibility for the Armory Platform."
 ---
 
