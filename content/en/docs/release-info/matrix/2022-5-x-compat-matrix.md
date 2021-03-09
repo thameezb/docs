@@ -1,7 +1,7 @@
 ---
 title: Armory Platform Compatibility Matrix for 2022.05 (LTS)
 linkTitle: 2022.05 LTS Armory Platform Compatibility
-description: "The compatability matrix describes all the supported functionality and integrations for a Long Term Stable (LTS) release line."
+description: "Information about support and compatibility for the Armory Platform for 2022.05 (LTS)."
 ---
 
 <!-- If you don't want to make markdown tables manually, use something like https://www.tablesgenerator.com/markdown_tables#

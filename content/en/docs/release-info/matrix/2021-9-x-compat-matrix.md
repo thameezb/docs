@@ -1,7 +1,7 @@
 ---
-title: Armory Platform Compatibility Matrix for v3.x
-linkTitle: 3.x Platform Compatibility
-description: "Information about support and compatibility for the Armory Platform for Armory 3.x."
+title: Armory Platform Compatibility Matrix for 2021.09 (LTS)
+linkTitle: 2021.09 (LTS) Platform Compatibility
+description: "Information about support and compatibility for the Armory Platform for Armory 2021.09 (LTS)."
 ---
 
 <!-- If you don't want to make markdown tables manually, use something like https://www.tablesgenerator.com/markdown_tables#
