@@ -2,7 +2,7 @@
 title: Armory Platform Compatibility Matrix
 linkTitle: Armory Platform Compatibility
 weight: 100
-description: "Information about support and compatibility for the Armory Platform."
+description: "Learn what version a feature is available on as well as version requirements for integrations with third-party software."
 ---
 
 <!-- If you don't want to make markdown tables manually, use something like https://www.tablesgenerator.com/markdown_tables#
@@ -10,7 +10,9 @@ Or you can write raw HTML :shrug: You might want to do that if you need to do bu
 Or a mixture of html + markdown. ## Deployment targets has an example of what this might look like
 -->
 
-This page describes the features and capabilities that Armory supports. Note that although Spinnaker™ is part of the Armory Platform, what Open Source Spinnaker supports and what Armory supports is not a one-to-one relationship.
+This page describes the features and capabilities that Armory supports. Note that although Spinnaker™ is part of the Armory Platform, what Open Source Spinnaker supports and what Armory supports is not a one-to-one relationship. Armory has integrations with third-party software and supports these integrations. Only integrations explicitly listed on this page are supported. Additionally, this support is limited to the integrations themselves and does not extend into any third-party software that Armory integrates with. 
+
+For features not listed on this page but available in Armory because they are available in OSS, you can use it but are responsible for your own support. Armory does not provide support for these features and does not guarantee their continued functionality.
 
 ## Legend
 <!-- Copy and paste the below badges that apply to your area -->
