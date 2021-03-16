@@ -2,7 +2,7 @@
 title: Armory Platform Compatibility Matrix
 linkTitle: Armory Platform Compatibility
 weight: 100
-description: "Learn what version a feature is available on as well as version requirements for integrations with third-party software."
+description: "Learn about integrations, features, and any version requirements for the Armory Platform."
 ---
 
 <!-- If you don't want to make markdown tables manually, use something like https://www.tablesgenerator.com/markdown_tables#
@@ -10,9 +10,9 @@ Or you can write raw HTML :shrug: You might want to do that if you need to do bu
 Or a mixture of html + markdown. ## Deployment targets has an example of what this might look like
 -->
 
-This page describes the features and capabilities that Armory supports. Note that although Spinnaker™ is part of the Armory Platform, what Open Source Spinnaker supports and what Armory supports is not a one-to-one relationship. Armory has integrations with third-party software and supports these integrations. Only integrations explicitly listed on this page are supported. Additionally, this support is limited to the integrations themselves and does not extend into any third-party software that Armory integrates with. 
+This page describes the features, capabilities, and integrations that Armory supports. Note that although Spinnaker™ is part of the Armory Platform, what Open Source Spinnaker supports and what Armory supports is not a one-to-one relationship. Armory has integrations with third-party software and supports these integrations. Only integrations explicitly listed on this page are supported. Additionally, this support is limited to the integrations themselves and does not extend into any third-party software that Armory integrates with. 
 
-For features not listed on this page but available in Armory because they are available in OSS, you can use it but are responsible for your own support. Armory does not provide support for these features and does not guarantee their continued functionality.
+For features not listed on this page but available in Armory because they are available in the open source Spinnaker project,, Armory does not provide support for them and does not guarantee their continued functionality.
 
 ## Legend
 <!-- Copy and paste the below badges that apply to your area -->
@@ -42,11 +42,13 @@ For features not listed on this page but available in Armory because they are av
 
 For a full list of previous releases, see this [page](https://armory.jfrog.io/artifactory/manifests/).
 
-## Application metrics for Canary Analysis
+## Application metrics for deployment verification
 
 [![Generally available](/images/ga.svg)]({{< ref "release-definitions#ga" >}}) ![OSS](/images/oss.svg) ![Armory](/images/armory.svg)
 
-Application metrics can be ingested by Kayenta to perform Canary Analysis or Automated Canary Analysis (ACA). For information about how to enable Canary Analysis, see {{< linkWithTitle kayenta-configure.md >}}.
+Application metrics can be ingested by the Kayenta service in Armory. These metrics can then be used to perform deployment verification through either Canary Analysis or Automated Canary Analysis (ACA). 
+
+For information about how to enable Canary Analysis, see {{< linkWithTitle kayenta-configure.md >}}.
 
 The following table lists supported app metric providers:
 
@@ -169,7 +171,7 @@ The following table lists the supported authentication protocols:
 
 | Identity provider     | Armory                 | Note                                                                                                     |
 | --------------------- | ---------------------- | -------------------------------------------------------------------------------------------------------- |
-| None                  | All supported versions | We highly recommend having Spinnaker only accessible through a VPN if this is turned on.                     |
+| None                  | All supported versions | Armory highly recommends having restricting access through a VPN if no authentication is turned on.                     |
 | SAML                  | All supported versions |                                                                                                          |
 | OAuth 2.0/OIDC        | All supported versions | You can use any OAuth 2.0 provider such as Auth0, Azure, GitHub, Google, Okta, OneLogin, or Oracle Cloud. |
 | LDAP/Active Directory | All supported versions |                                                                                                          |
@@ -211,7 +213,7 @@ The following table lists the supported manifest templating engines:
 | Provider  | Armory                 | Notes                                |
 | --------- | ---------------------- | ------------------------------------ |
 | Helm 2    | All supported versions |                                      |
-| Helm 3    | 2.19.x or later        |                                      |
+| Helm 3    | All supported versions       |                                      |
 | Kustomize | All supported versions | Kustomize version installed is 3.8.1 |
 
 ## Browsers
@@ -392,6 +394,8 @@ The following table lists the supported notification systems:
 
 [![Generally available](/images/ga.svg)]({{< ref "release-definitions#ga" >}}) ![OSS](/images/oss.svg) ![Armory](/images/armory.svg)
 
+Observability refers to monitoring the performance of the Armory platform. This is separate from monitoring the application metrics for things that you deploy using Armory. For information about the app metric providers that Armory supports, see [Application metrics for deployment verification](#application-metrics-for-deployment-verification).
+
 The following table lists the supported observabilty providers:
 
 | Provider   | Version                | Armory                 | Note                        |
@@ -404,7 +408,7 @@ The following table lists the supported observabilty providers:
 
 [![Generally available](/images/ga.svg)]({{< ref "release-definitions#ga" >}}) ![OSS](/images/oss.svg) ![Armory](/images/armory.svg)
 
-The following table lists the supported pipeline triggers:
+The following table lists the different ways you can trigger pipelines:
 
 | Provider           | Armory                 | Notes |
 | ------------------ | ---------------------- | ----- |
@@ -424,13 +428,13 @@ The following table lists the supported pipeline triggers:
 
 [![Generally available](/images/ga.svg)]({{< ref "release-definitions#ga" >}}) ![Armory](/images/armory.svg)
 
-The [Policy Engine]({{< ref "policy-engine-enable" >}}) gives you the ability to ensure any Spinnaker pipeline meets certain requirements you specify.
+The [Policy Engine]({{< ref "policy-engine-enable" >}}) gives you the ability to ensure any Spinnaker pipeline meets certain requirements that you specify.
 
 **OPA requirements**
 
-The Policy Engine requires an Open Policy Agent server. This can be deployed in the same cluster as Spinnaker or in an external cluster.
+The Policy Engine requires an Open Policy Agent (OPA) server. This can be deployed in the same cluster as Spinnaker or in an external cluster.
 
-The following table lists the requirements:
+The following table lists the requirements for the OPA server:
 
 | Requirement | Version         | Note                                                                                                                                  |
 | ----------- | --------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
