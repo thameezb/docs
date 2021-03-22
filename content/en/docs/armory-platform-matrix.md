@@ -32,7 +32,9 @@ For features not listed on this page but available in Armory because they are av
 
 **Versions**
 
-**All supported versions** for the Armory version refers to the current minor release and the two previous minor releases. For example, if the current version is 2.21.x, all supported versions include 2.19.x, 2.20.x, and 2.21.x. For third-party software, "all supported versions" refers to actively maintained versions by the provider.
+When "all supported versions" is used to refer to the Armory version, the releases being specified are the latest versions of the following: the current minor release and the two previous minor releases. For example, if the current version is 2.24.x, all supported versions include 2.22.x, 2.23.x, and 2.24.x. Note that Armory recommends using the latest available patch release of a minor release so that you have access to bug fixes and improvements.
+
+For third-party software, "all supported versions" refers to actively maintained versions of that provider by its vendor.
 
 ## Agent
 
@@ -55,6 +57,7 @@ The following table lists supported app metric providers:
 | Provider       | Version                | ACA | Armory                 | Note |
 |----------------|------------------------|-----|------------------------|------|
 | [AWS Cloudwatch]({{< ref "kayenta-canary-cloudwatch.md" >}}) | All supported versions | Yes | 2.23.1 or later        |      |
+| Datadog       | All supported versions | Yes | All supported versions |      |
 | [Dynatrace]({{< ref "kayenta-canary-dynatrace.md" >}})      | All supported versions | Yes | 2.23.0 or later        |      |
 | Graphite       | All supported versions | Yes | All supported versions |      |
 | New Relic      | All supported versions | Yes | All supported versions |      |
@@ -332,7 +335,9 @@ You write the function and use Armory to manage the rollout of iterative version
 
 [![Generally available](/images/ga.svg)]({{< ref "release-definitions#ga" >}}) ![OSS](/images/oss.svg) ![Armory](/images/armory.svg)
 
-Dynamic accounts (external account configurations) for Spinnaker allow you to manage account configuration outside of Spinnaker, including secrets.
+Dynamic accounts (external account configurations) for Spinnaker allow you to manage account configuration outside of Spinnaker, including secrets. 
+
+> Armory does not recommend using Spring Cloud Config in conjunction with dynamic accounts.
 
 **Backend provider**
 
