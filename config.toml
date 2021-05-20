@@ -105,12 +105,12 @@ terms_and_conditions = "https://www.armory.io/terms-and-conditions/"
 
 # Menu title if your navbar has a versions selector to access old versions of your site.
 # This menu appears only if you have at least one [params.versions] set.
-version_menu = "Latest"
+version_menu = "v2.25"
 
 # Flag used in the "version-banner" partial to decide whether to display a
 # banner on every page indicating that this is an archived version of the docs.
 # Set this flag to "true" if you want to display the banner.
-archived_version = false
+archived_version = true
 
 # The version number for the version of the docs represented in this doc set.
 # Used in the "version-banner" partial to display a version number for the
@@ -143,21 +143,12 @@ prism_syntax_highlighting = true
 
 # Armory Agent plugin versions
 [params.kubesvc-plugin]
-<<<<<<< HEAD
-agent_plug_latest-2="0.7.10"
-agent_plug_latest_spin-2="2.24.x (1.24.x)"
-agent_plug_latest-1="0.8.9"
-agent_plug_latest_spin-1="2.25.x (1.25.x)"
-agent_plug_latest="0.9.1"
-agent_plug_latest_spin="2.26.x (1.26.x)"
-=======
 agent_plug_latest-2="0.6.8"
 agent_plug_latest_spin-2="2.23.x (1.23.x)"
 agent_plug_latest-1="0.7.7"
 agent_plug_latest_spin-1="2.24.x (1.24.x)"
 agent_plug_latest="0.8.6"
 agent_plug_latest_spin="2.25.x (1.25.x)"
->>>>>>> 09cda2e (docs(release): PR that merges master into 2.25 (#608))
 
 # User interface configuration
 [params.ui]
@@ -224,6 +215,11 @@ enable = true
   url = "https://docs.armory.io/docs"
 
 [[params.versions]]
+  version = "v2.25"
+  githubbranch = "v2.25"
+  url = "https://v2-25.docs.armory.io/docs"
+
+[[params.versions]]
   version = "v2.24"
   githubbranch = "v2.24"
   url = "https://v2-24.docs.armory.io/docs"
@@ -232,8 +228,3 @@ enable = true
   version = "v2.23"
   githubbranch = "v2.23"
   url = "https://v2-23.docs.armory.io/docs"
-
-[[params.versions]]
-  version = "v2.22"
-  githubbranch = "v2.22"
-  url = "https://v2-22.docs.armory.io/docs"
