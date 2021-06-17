@@ -442,7 +442,28 @@ The file `deploy.stage.module` would look like this:
   "type": "deploy"
 }
 ```
+## Ignoring non-module files in the template repository
 
+By default, Dinghy will attempt to parse any file pushed to the template repository as a Dinghy Module. This can lead to validation
+errors if the files are not properly formatted JSON, HCL, or YAML. 
+
+To account for this you can use a `.dinghyignore` file in the root of your template repository to specify filename patterns that Dinghy should ignore. 
+
+[Similar to a `.gitignore` file](https://git-scm.com/docs/gitignore), you can specify one regular expression pattern per line of the `.dinghyignore` file. If 
+a file is pushed to the template repository and matches  any of the patterns in the `.dinghyignore` file that file will ignored by dinghy. 
+
+A `.dinghyignore` would look like this: 
+```gitignore
+*.md
+sampleDirectory/*
+filename.extension
+```
+The above sample would cause dinghy to ignore: 
+* All markdown files
+* Any files in a directory named `sampleDirectory` (or any of its subdirectories)
+* Any file named `filename.extension`
+
+Blank lines in the `.dinghyignore` file are ignored
 ## Multiple level inheritance
 
 In the below example, we show a pipeline that is created with multiple levels of module inheritance. The application's dinghyfile looks like this:
