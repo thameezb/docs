@@ -11,8 +11,8 @@ description: "Enable the Policy Engine Plugin and connect it to your OPA server.
 
 Make sure the following requirements are met:
 
-* If you are [migrating from the Policy Engine Extension]({{< ref "policy-engine-enable#migrating-to-the-policy-engine-plugin" >}}), make sure you have turned off the extension. 
-* You have an OPA server available. For more information, see [Deploy an OPA server]({{< ref "policy-engine-enable#deploy-an-opa-server" >}}). 
+* If you are [migrating from the Policy Engine Extension]({{< ref "policy-engine-enable#migrating-to-the-policy-engine-plugin" >}}), make sure you have turned off the extension.
+* You have an OPA server available. For more information, see [Deploy an OPA server]({{< ref "policy-engine-enable#deploy-an-opa-server" >}}).
 * Access to the internet to download the plugin.
 
 ## Setup
@@ -55,7 +55,7 @@ spec:
               # Replace with the actual URL to your Open Policy Agent deployment
               baseUrl: https://opa.url:8181/v1/data
               # Optional. The number of seconds that the Policy Engine will wait for a response from the OPA server. Default is 10 seconds if omitted.
-              # timeoutSeconds: <integer> 
+              # timeoutSeconds: <integer>
         spinnaker:
           extensibility:
             repositories:
@@ -200,6 +200,23 @@ spec:
 ```
 
 ### Optional settings
+
+#### JSON validation
+
+You can configure strict JSON validation as a boolean in `spec.spinnakerConfig.profiles.dinghy.jsonValidationDisabled`:
+
+```yaml
+spec:
+  spinnakerConfig:
+    profiles:
+      dinghy:
+        jsonValidationDisabled: <boolean>
+```
+
+The config is optional. If omitted, strict validation is on by default.
+
+> When strict validation is on, existing pipelines may fail if any JSON is invalid.
+
 #### Timeout settings
 
 You can configure the amount of time that the Policy Engine waits for a response from your OPA server. If you have network or latency issues, increasing the timeout can make Policy Engine more resilient. Use the following config to set the timeout in seconds:  `spec.spinnakerConfig.profiles.spinnaker.armory.policyEngine.opa.timeoutSeconds`. The default timeout is 10 seconds if you omit the config.
@@ -246,7 +263,7 @@ You can configure the amount of time that the Policy Engine waits for a response
        mountPath: /opt/spinnaker/lib/local-plugins
    ```
 
-1. Configure Halyard by updating your `.hal/config` file. Use the following snippet and replace `<PLUGIN VERSION>` with the [plugin version](#release-notes) you want to use without the `v` prefix: 
+1. Configure Halyard by updating your `.hal/config` file. Use the following snippet and replace `<PLUGIN VERSION>` with the [plugin version](#release-notes) you want to use without the `v` prefix:
 
    ```yaml
    deploymentConfigurations:
@@ -314,7 +331,7 @@ For information about loading a policy, see [Using the Policy Engine]({{< ref "p
 
 ## Release notes
 
-* 0.1.6 - The Policy Engine Plugin is now generally available. 
+* 0.1.6 - The Policy Engine Plugin is now generally available.
   * If you are new to using the Policy Engine, use the plugin instead of the extension project.
   * Entitlements using API Authorization no longer requires at least one policy. Previously, if you had no policies set, Policy Engine prevented any action from being taken. Now, Entitlements for Policy Engine allows any action to be taken if there are no policies set.
 * 0.1.4 - Adds the `opa.timeoutSeconds` property, which allows you to configure how long the Policy Engine waits for a response from the OPA server.
