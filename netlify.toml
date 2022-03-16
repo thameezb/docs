@@ -102,8 +102,8 @@ package = "@netlify/plugin-sitemap"
     './public/docs/installation/aurora-install/',
     './public/borealis/',
     './public/managed-spin'
-    
-    
+
+
   ]
   # append missing trailing slash to prettyURL
   trailingSlash = true
@@ -117,3 +117,4 @@ package = "@netlify/plugin-sitemap"
   for = "/*"
   [headers.values]
     X-Frame-Options = "SAMEORIGIN"
+    X-Robots-Tag = noindex
