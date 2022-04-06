@@ -7,6 +7,9 @@
 
 
 # "production" environment specific build settings
+# "archive" tells Hugo to generate the noindex, nofollow meta tag so the site
+# won't be indexed
+# layouts/robots.txt also has "Disallow: /"
 [build.environment]
   HUGO_VERSION = "0.71.1"
   HUGO_THEME = "docsy"
@@ -19,6 +22,7 @@ package = "@netlify/plugin-sitemap"
   [plugins.inputs]
   buildDir = "public"
   # make sure you add a comma after each entry in the exclude list except on the last one
+  # exclude everything in archive site
   exclude =[
     './public/**/**'
   ]
