@@ -38,4 +38,3 @@ package = "@netlify/plugin-sitemap"
   for = "/*"
   [headers.values]
     X-Frame-Options = "SAMEORIGIN"
-    X-Robots-Tag = "noindex, nofollow"
