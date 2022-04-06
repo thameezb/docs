@@ -96,9 +96,7 @@ package = "@netlify/plugin-sitemap"
   buildDir = "public"
   # make sure you add a comma after each entry in the exclude list except on the last one
   exclude =[
-    './public/docs/',
-    './public/borealis/',
-    './public/managed-spin/'
+    './public/**/**'
   ]
   # append missing trailing slash to prettyURL
   trailingSlash = true
