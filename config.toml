@@ -65,7 +65,7 @@ weight = 1
 [[menu.main]]
   name = "Armory.io"
   weight = 5
-  url = "https://www.armory.io"
+  url = "https://www.armory.io/"
 
 [[menu.main]]
   name = "Case Studies"
@@ -119,7 +119,7 @@ version = "2.25"
 
 # A link to latest version of the docs. Used in the "version-banner" partial to
 # point people to the main doc site.
-url_latest_version = "https://docs.armory.io/docs/"
+url_latest_version = "https://docs.armory.io/"
 
 # Repository configuration (URLs for in-page links to opening issues and suggesting changes)
 github_repo = "https://github.com/armory/docs/"
@@ -214,17 +214,3 @@ enable = true
   githubbranch = "master"
   url = "https://docs.armory.io/"
 
-[[params.versions]]
-  version = "v2.25"
-  githubbranch = "v2.25"
-  url = "https://v2-25.docs.armory.io/docs/"
-
-[[params.versions]]
-  version = "v2.24"
-  githubbranch = "v2.24"
-  url = "https://v2-24.docs.armory.io/docs/"
-
-[[params.versions]]
-  version = "v2.23"
-  githubbranch = "v2.23"
-  url = "https://v2-23.docs.armory.io/docs/"
