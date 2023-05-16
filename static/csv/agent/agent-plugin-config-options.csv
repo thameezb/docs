@@ -11,6 +11,11 @@ Setting|Type|Default|Description
 <code>kubesvc.credentials.poller.reloadFrequencyMs</code>|long|30000|<span class='badge badge-primary'>2.23.0+</span> <span class='badge badge-primary'>1.23.0+</span> How often the plugin will refresh account credentials to clouddriver in case <code>credentials.poller.enabled</code> is disabled. Otherwise the standard properties of <code>credentials.poller.enabled</code> and <code>credentials.poller.types.kubernetes.reloadFrequencyMs</code> are respected
 <code>kubesvc.disableV2Provider</code>|boolean|false|If you don’t need the V2 provider account, set that to true to speed up caching deserialization.
 <code>kubesvc.dynamicAccounts.enabled</code>|boolean|false|<span class='badge badge-primary'>0.11.27+</span><span class='badge badge-primary'>0.10.65+</span><span class='badge badge-primary'>0.9.81+</span> Enable access to the Dynamic Accounts API
+<code>kubesvc.dynamicAccounts.namePatterns</code>|array|<code>[]</code>|Account name patterns for automatic migration from V2 provider to Agent. The accounts needs to be present in the accounts table.
+<code>kubesvc.dynamicAccounts.scanBatchSize</code>|int|572|Max number of accounts to be sent to Agent at a time. This is used with <code>namePatterns</code>.
+<code>kubesvc.dynamicAccounts.addAccountChunkSize</code>|int|572|Max number of accounts to be sent to Agent at a time. This is used when an Agent replica connects/reconnects if accounts had already been added.
+<code>kubesvc.dynamicAccounts.maxRetries</code>|int|3|Max number of retries for adding an account, if a new API request is done for the same account it will reset this count.
+<code>kubesvc.dynamicAccounts.retryFrequencySeconds</code>|int|5|How often to retry a dynamic account operation.
 <code>kubesvc.grpc.auth.x509.enabled</code>|boolean|false|Enable x509 subject filtering
 <code>kubesvc.grpc.auth.x509.filters</code>|list(string)|<code>[]</code>|x509 subject line filter; see <a href='https://docs.armory.io/docs/armory-agent/configure-mtls/#x509-certificate-subject-filtering' target='new'>x509 Certificate Subject Filtering</a>
 <code>kubesvc.grpc.server.address</code>|string|<code>*</code>|Address to bind the gRPC server to
